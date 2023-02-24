@@ -1,0 +1,44 @@
+.wallet-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wallet-header {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+}
+
+.wallet-noCards {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.cardsWrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.wallet-btn {
+    padding: 1.5rem 4rem;
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.wallet-btn:hover {
+    color: rgb(25, 121, 29);
+    border-color: rgb(25, 121, 29);
+    background-color: rgba(0,0,0,0.05);
+}
+

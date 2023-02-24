@@ -1,0 +1,45 @@
+.newCard-section {
+    width: 650px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newCard-header {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+}
+
+.cardAndFormsWrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.newCard-topText {
+    font-size: .8rem;
+    text-align: center;
+    margin: 0 0 .5rem 0;
+    color: rgb(78, 78, 78);
+}
+
+.newCard-btn {
+    padding: 1.5rem 4rem;
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.newCard-btn:hover {
+    color: rgb(25, 121, 29);
+    border-color: rgb(25, 121, 29);
+    background-color: rgba(0,0,0,0.05);
+}

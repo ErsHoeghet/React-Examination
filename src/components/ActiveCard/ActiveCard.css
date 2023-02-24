@@ -1,0 +1,11 @@
+.card-topText {
+    font-size: .8rem;
+    text-align: center;
+    margin: 0 0 .5rem 0;
+    color: rgb(78, 78, 78);
+}
+
+.activeCard {
+    width: 100%;
+    height: 45%;
+}

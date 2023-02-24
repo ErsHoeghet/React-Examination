@@ -1,0 +1,59 @@
+.textInputStyle,
+#vendor {
+    font-size: 1.5rem;
+    padding: .8rem;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#validThru,
+#ccv {
+    width: 100%;
+}
+
+.pElemTweaks {
+    margin-bottom: .1rem;
+}
+
+input {
+    margin-bottom: .7rem;
+}
+
+.formWrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBox {
+    width: 75%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cardHolderName::placeholder {
+    font-size: 1.3rem;
+    color: rgb(109, 109, 109);
+    vertical-align: middle;
+    /* Fungerar inte, vet inte varför. Tanken är att den ska centrera placeholdern vertikalt i input-fältet */
+}
+
+.validCcvWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.validWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.ccvWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
