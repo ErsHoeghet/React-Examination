@@ -5,7 +5,7 @@ import vendorBlockchain from "../../assets/vendor-blockchain.svg";
 import vendorEvil from "../../assets/vendor-evil.svg";
 import vendorNinja from "../../assets/vendor-ninja.svg";
 
-const VendorImage = ({ vendor }) => {
+const VendorLogo = ({ vendor }) => {
     if (vendor === "vendorBlockchain") {
         return <img className="card-vendorLogo" src={vendorBlockchain} />
     }
@@ -21,22 +21,19 @@ const VendorImage = ({ vendor }) => {
     return <img className="card-vendorLogo" src={vendorBitcoin} />
 }
 
-function Card({ card }) {
-
+function Card({ card, index }) {
     const { cardName, cardNumber, valid, ccv, vendor, color } = card;
 
     return (
-        <article className="card">
-            <section className="card-cardBox" style={{ backgroundColor: color }}>
-                <img className="card-chip" src={chipLight} alt="Card chip." />
-                <VendorImage vendor={vendor} />
-                <p className="card-cardNumber">{cardNumber}</p>
-                <p className="card-cardholderTopic">CARDHOLDER NAME</p>
-                <p className="card-cardholderName">{cardName}</p>
-                <p className="card-validThruTopic">VALID THRU</p>
-                <p className="card-validThruValue">{valid}</p>
-            </section>
-        </article>
+        <section className="card" style={{ backgroundColor: color }}>
+            <img className="card-chip" src={chipLight} alt="Card chip." />
+            <VendorLogo vendor={vendor} />
+            <p className="card-cardNumber">{cardNumber}</p>
+            <p className="card-cardholderTopic">CARDHOLDER NAME</p>
+            <p className="card-cardholderName">{cardName}</p>
+            <p className="card-validThruTopic">VALID THRU</p>
+            <p className="card-validThruValue">{valid}</p>
+        </section>
     )
 }
 

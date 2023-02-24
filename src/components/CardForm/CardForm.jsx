@@ -8,14 +8,20 @@ const vendors = [
     { val: "evilcorp", text: "EVIL CORP", color: "#DE2F4E", logo: "vendorEvil" }
 ];
 
-function CardForm({ setNewCardColorAndLogo, setCards }) {
+let color = "#FFAE34";
+let vendorLogo = "vendorBitcoin";
 
+function CardForm({ setNewCardColorAndLogo, cards, setCards, generatedCardNumber, standardValues }) {
     const navigate = useNavigate()
+
+    let newCard = standardValues;
 
     function setColorToCard(event) {
         vendors.map((vendor) => {
             if (event.target.value === vendor.val) {
                 setNewCardColorAndLogo(vendor.color, vendor.logo)
+                color = vendor.color;
+                vendorLogo = vendor.logo
             }
         })
     }
@@ -23,27 +29,27 @@ function CardForm({ setNewCardColorAndLogo, setCards }) {
     function handleAddCard(e) {
         e.preventDefault();
 
-        const { cardnumber, cardholdername, validthru, vendor } = e.target;
+        const { cardholdername, validthru, vendor } = e.target;
 
-        const newCard = {
-            cardNumber: cardnumber.value,
+        newCard = {
+            cardNumber: generatedCardNumber,
             cardName: cardholdername.value,
             valid: validthru.value,
             ccv: "123",
-            vendor: vendor.value,
-            color: "#FFAE34"
+            vendor: vendorLogo,
+            color: color
         }
 
         setCards((prev) => ([...prev, newCard]));
 
-        navigate('/');
+        navigate("/");
     }
 
     return (
         <div className="formWrapper">
             <form className="formBox" onSubmit={handleAddCard}>
                 <p className="pElemTweaks">CARD NUMBER</p>
-                <input type="text" name="cardnumber" id="cardNumber" className="textInputStyle" />
+                <input type="text" name="cardnumber" id="cardNumber" className="textInputStyle" defaultValue={generatedCardNumber} disabled />
                 <p className="pElemTweaks">CARDHOLDER NAME</p>
                 <input type="text" name="cardholdername" placeholder="FIRSTNAME LASTNAME" id="cardHolderName" className="textInputStyle" />
                 <div className="validCcvWrapper">
